@@ -50,7 +50,7 @@ const FloatingAchievement = () => {
             {/* Holographic effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-            {/* 3D rotating background */}
+            {/* 3D rotating background ok*/}
             <div
               className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500"
               style={{
