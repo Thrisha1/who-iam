@@ -5,25 +5,25 @@ const socials = [
   {
     name: "GitHub",
     icon: Github,
-    url: "https://github.com",
+    url: "https://github.com/Thrisha1",
     color: "hover:text-foreground",
   },
   {
     name: "LinkedIn",
     icon: Linkedin,
-    url: "https://linkedin.com",
+    url: "https://linkedin.com/in/thrishakannan/",
     color: "hover:text-primary",
   },
   {
     name: "Twitter",
     icon: Twitter,
-    url: "https://twitter.com",
+    url: "https://twitter.com/Thrishakannan1",
     color: "hover:text-accent",
   },
   {
     name: "Email",
     icon: Mail,
-    url: "mailto:your.email@example.com",
+    url: "mailto:thrishakannan25@gmail.com",
     color: "hover:text-destructive",
   },
 ];
@@ -38,7 +38,8 @@ const Social = () => {
           </span>
         </h2>
         <p className="text-muted-foreground text-center mb-12 text-lg max-w-2xl mx-auto">
-          I'm always interested in hearing about new opportunities, collaborations, or just having a chat about technology and innovation.
+          I'm always interested in hearing about new opportunities,
+          collaborations, or just having a chat about technology and innovation.
         </p>
 
         <div className="flex justify-center gap-4 flex-wrap">

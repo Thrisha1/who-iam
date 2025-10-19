@@ -1,25 +1,21 @@
-import { useEffect, useState } from 'react';
-import { Terminal } from 'lucide-react';
+import { useEffect, useState } from "react";
+import { Terminal } from "lucide-react";
 
 const codeSnippets = [
-  { text: '$ npm install success', type: 'success' },
-  { text: '> Building production bundle...', type: 'info' },
-  { text: '✓ Compiled successfully', type: 'success' },
-  { text: '⚡ Hot reload enabled', type: 'info' },
-  { text: 'ERROR: Module not found', type: 'error' },
-  { text: '✓ Error resolved', type: 'success' },
-  { text: '> Deploying to production...', type: 'info' },
-  { text: '✓ Deployed successfully 🚀', type: 'success' },
+  { text: "> Building what is currently 404", type: "info" },
+  { text: "Pair programming: enabled", type: "info" },
+  { text: 'ERROR: No space left for "impossible"', type: "error" },
+  { text: "✅ Status 200 on critical tasks", type: "success" },
 ];
 
 const TerminalTyping = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [displayText, setDisplayText] = useState('');
+  const [displayText, setDisplayText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
 
   useEffect(() => {
     const currentSnippet = codeSnippets[currentIndex];
-    
+
     if (isTyping && displayText.length < currentSnippet.text.length) {
       const timeout = setTimeout(() => {
         setDisplayText(currentSnippet.text.slice(0, displayText.length + 1));
@@ -32,7 +28,7 @@ const TerminalTyping = () => {
       return () => clearTimeout(timeout);
     } else {
       const timeout = setTimeout(() => {
-        setDisplayText('');
+        setDisplayText("");
         setIsTyping(true);
         setCurrentIndex((prev) => (prev + 1) % codeSnippets.length);
       }, 500);
@@ -41,10 +37,12 @@ const TerminalTyping = () => {
   }, [displayText, isTyping, currentIndex]);
 
   const currentType = codeSnippets[currentIndex].type;
-  const colorClass = 
-    currentType === 'error' ? 'text-destructive' :
-    currentType === 'success' ? 'text-primary' :
-    'text-accent';
+  const colorClass =
+    currentType === "error"
+      ? "text-destructive"
+      : currentType === "success"
+        ? "text-primary"
+        : "text-accent";
 
   return (
     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-card/80 backdrop-blur-sm border border-primary/20 font-mono text-sm">
